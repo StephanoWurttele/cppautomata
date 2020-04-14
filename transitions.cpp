@@ -2,5 +2,5 @@
 
 Transition::Transition(int val, State* targetNode){
     target = targetNode;
-    token = Token(val);
+    token = Token(val, ' ');
 }

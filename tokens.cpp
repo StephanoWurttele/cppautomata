@@ -1,15 +1,16 @@
 #include "tokens.h"
 
-Token::Token(int _name){
+Token::Token(int _name, char character){
+    content = ' ';
     switch (_name){
         case 0:
-            name = W;
+            name = L;
             break;
         case 1:
-            name = A;
+            name = N;
             break;
         case 2: 
-            name = P;
+            name = S;
             break;
         default:  
             name = O;

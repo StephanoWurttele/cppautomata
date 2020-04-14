@@ -4,6 +4,7 @@
 #include <vector>
 class Automata{
     private:
+    std::vector<std::string> output;
     std::vector<State*> states;
     std::vector<std::vector<Transition>> transitions;
     State* current_state;

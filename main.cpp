@@ -5,18 +5,18 @@ int main(int argc, char *argv[]){
         std::cout<<"Please enter automata file and mail only";
         return 0;
     };
-    Automata email_tester(argv[1]);
-    std::string mail = argv[2];
+    Automata reader(argv[1]);
+    std::string input_line = argv[2];
     std::vector<Token> TokenVec;
-    email_tester.show();
+    reader.show();
     Scanner scanner;
-    for (char c : mail)  
+    for (char c : input_line)
         TokenVec.push_back(scanner.scan(c));
     for (Token t : TokenVec)
         std::cout << t.type() << " ";
     std::cout << std::endl;
-    email_tester.run(TokenVec);
-    email_tester.accepted() ? std::cout << "Email is valid" : std::cout << "Email is not valid";
+    reader.run(TokenVec);
+    reader.accepted() ? std::cout << "Email is valid" : std::cout << "Email is not valid";
     
     return 0;
 };
